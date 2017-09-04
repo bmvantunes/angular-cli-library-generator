@@ -5,8 +5,8 @@
 [![npm version](https://badge.fury.io/js/angular-cli-library-generator.svg)](https://badge.fury.io/js/angular-cli-library-generator)
 [![codecov](https://codecov.io/gh/bmvantunes/angular-cli-library-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/bmvantunes/angular-cli-library-generator)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/bmvantunes/angular-cli-library-generator.svg)](https://greenkeeper.io/)
-
+[![Greenkeeper badge](https://badges.greenkeeper.io/bmvantunes/angular-cli-library-generator.svg?token=d71dae215eef0c39d342bde403e6ff59bf750e05bb6bfb7508e54291b6f710eb&ts=1504467867291)](https://greenkeeper.io/)
 
 # angular-cli-library-generator
+
 Generate new components and documentation for your Angular (2+) library using @angular/cli
