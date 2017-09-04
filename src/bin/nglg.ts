@@ -29,4 +29,5 @@ yargs
   .strict()
 
   // epilog, aka, footer of the helper command
-  .epilog('@angular/cli Library Generator');
+  .epilog('@angular/cli Library Generator')
+  .argv;
