@@ -1,6 +1,5 @@
 import * as yargs from 'yargs';
 
-// tslint:disable-next-line:no-unused-expression
 yargs
   // help
   .help('help')
@@ -14,16 +13,8 @@ yargs
   .usage('Usage: $0 [blueprint] [name]')
   .example('Example: $0 component my-component-name', 'my-component-name is the name of your component')
 
-  // generate blueprint
-  .command({
-    command: 'generate <blueprint> <name>',
-    describe: 'Generate blueprint and demo with the specified name',
-    aliases: ['g', '*'],
-    builder: (yargs) => yargs.default('blueprint', 'component'),
-    handler: (argv) => {
-      console.log(`Generating ${argv.blueprint} ${argv.name}`);
-    }
-  })
+  // executes commands based on file system directories
+  .commandDir('commands')
 
   // only accept known parameters
   .strict()
