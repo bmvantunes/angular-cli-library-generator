@@ -1,5 +1,7 @@
+import { DemoGenerator } from './demo/demo.generator';
+
 export class ComponentMain {
-  create(name: string) {
-    console.log('test bruno', name);
+  async create(name: string) {
+    await DemoGenerator.generate(name);
   }
 }
