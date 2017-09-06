@@ -32,10 +32,8 @@ export class InnerRealComponentGenerator {
     const componentFilePath = paths.real.componentFilePath;
 
     return await AngularCliWrapper.createFile(indexTs,
-      `import { ${moduleClassName} } from './${moduleFilePath}';\n` +
-      `import { ${componentClassName} } from './${componentFilePath}';\n\n` +
-      `export { ${moduleClassName} };\n` +
-      `export { ${componentClassName} };\n`
+      `export { ${moduleClassName} } from './${moduleFilePath}';\n` +
+      `export { ${componentClassName} } from './${componentFilePath}';\n`
     );
   }
 }

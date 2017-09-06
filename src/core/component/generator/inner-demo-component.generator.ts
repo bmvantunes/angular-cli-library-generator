@@ -29,8 +29,7 @@ export class InnerDemoComponentGenerator {
     const moduleFilePath = paths.demo.moduleFilePath;
 
     return await AngularCliWrapper.createFile(indexTs,
-      `import { ${moduleClassName} } from './${moduleFilePath}';\n\n` +
-      `export { ${moduleClassName} };\n`
+      `export { ${moduleClassName} } from './${moduleFilePath}';\n`
     );
   }
 }
