@@ -12,7 +12,7 @@ export class NameGenerator {
     return {
       demo: {
         folderPath: demo,
-        routingModulePath: `${demo}-routing.module`,
+        routingModulePath: `${demo}/${casings.dashCase}-demo-routing.module`,
         moduleClassName: `${casings.pascalCase}DemoModule`,
         moduleFilePath: `${casings.dashCase}-demo.module`,
         indexTs: `${demo}/index.ts`
