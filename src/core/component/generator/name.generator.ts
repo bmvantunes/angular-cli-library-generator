@@ -1,4 +1,4 @@
-import { INames } from './names.interface';
+import { INames } from '../names.interface';
 
 const pathStart = 'components';
 
@@ -12,6 +12,7 @@ export class NameGenerator {
     return {
       demo: {
         folderFullPath: demo,
+        componentHtmlFullPath: `${demo}/${casings.dashCase}-demo.component.html`,
         routingModuleFullPath: `${demo}/${casings.dashCase}-demo-routing.module`,
         moduleClassName: `${casings.pascalCase}DemoModule`,
         moduleFilePath: `${casings.dashCase}-demo.module`,
