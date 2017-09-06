@@ -1,5 +1,5 @@
 import * as yargs from 'yargs';
-import { ComponentMain } from '../../core/component/main.component';
+import { ComponentMain } from '../../core/component/main';
 
 export const aliases = ['c'];
 export const command = 'component <name>';
