@@ -1,5 +1,6 @@
 const resolveNpm = require('resolve');
 const spawn = require('child_process').spawn;
+const fs = require('fs');
 
 export class AngularCliWrapper {
   static run(commands: string[]): Promise<void> {
@@ -14,6 +15,21 @@ export class AngularCliWrapper {
           reject();
         }
 
+        resolve();
+      });
+    });
+  }
+
+  static createFile(file: string, content: string) {
+    return new Promise((resolve, reject) => {
+      fs.writeFile(`${process.cwd()}/src/app/${file}`, content, (error: any) => {
+        if (error) {
+          console.error(`Error creating ${file}`);
+          process.exit(-1);
+          reject();
+        }
+
+        console.log(`${file} written to disk`);
         resolve();
       });
     });
