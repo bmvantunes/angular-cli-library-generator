@@ -1,11 +1,11 @@
 import { AngularCliWrapper } from '../../ng-cli.wrapper';
 import { INames } from '../names.interface';
 
-export class RealGenerator {
+export class InnerRealComponentGenerator {
   static async generate(paths: INames) {
-    await RealGenerator.generateModules(paths);
-    await RealGenerator.generateComponent(paths);
-    await RealGenerator.generateIndexFile(paths);
+    await InnerRealComponentGenerator.generateModules(paths);
+    await InnerRealComponentGenerator.generateComponent(paths);
+    await InnerRealComponentGenerator.generateIndexFile(paths);
   }
 
   private static async generateModules(paths: INames) {

@@ -1,4 +1,4 @@
-import { INames } from './names.interface';
+import { INames } from '../names.interface';
 import { NameGenerator } from './name.generator';
 import { expect } from 'chai';
 
@@ -9,6 +9,7 @@ describe('NameGenerator', () => {
     const expected: INames = {
       demo: {
         folderFullPath: 'components/hello-world/hello-world-demo',
+        componentHtmlFullPath: 'components/hello-world/hello-world-demo/hello-world-demo.component.html',
         routingModuleFullPath: 'components/hello-world/hello-world-demo/hello-world-demo-routing.module',
         moduleClassName: 'HelloWorldDemoModule',
         moduleFilePath: 'hello-world-demo.module',
