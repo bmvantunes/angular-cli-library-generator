@@ -10,9 +10,9 @@ export class InnerRealComponentGenerator {
 
   private static async generateModules(paths: INames) {
     const modulePath = paths.real.folderFullPath;
-    const moduleDemoRoutingPath = paths.demo.routingModuleFullPath;
+    const moduleDemoPath = paths.demo.moduleFullPath;
 
-    const params = ['g', 'm', modulePath, '-m', moduleDemoRoutingPath];
+    const params = ['g', 'm', modulePath, '-m', moduleDemoPath];
     return await AngularCliWrapper.run(params);
   }
 
