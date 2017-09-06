@@ -8,14 +8,15 @@ describe('NameGenerator', () => {
 
     const expected: INames = {
       demo: {
-        folderPath: 'components/hello-world/hello-world-demo',
-        routingModulePath: 'components/hello-world/hello-world-demo/hello-world-demo-routing.module',
+        folderFullPath: 'components/hello-world/hello-world-demo',
+        routingModuleFullPath: 'components/hello-world/hello-world-demo/hello-world-demo-routing.module',
         moduleClassName: 'HelloWorldDemoModule',
         moduleFilePath: 'hello-world-demo.module',
         indexTs: 'components/hello-world/hello-world-demo/index.ts'
       },
       real: {
-        folderPath: 'components/hello-world',
+        folderFullPath: 'components/hello-world',
+        moduleFullPath: 'components/hello-world/hello-world.module',
         componentClassName: 'HelloWorldComponent',
         moduleClassName: `HelloWorldModule`,
         componentFilePath: `hello-world.component`,

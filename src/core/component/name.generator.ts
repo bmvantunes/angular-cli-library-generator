@@ -11,14 +11,15 @@ export class NameGenerator {
 
     return {
       demo: {
-        folderPath: demo,
-        routingModulePath: `${demo}/${casings.dashCase}-demo-routing.module`,
+        folderFullPath: demo,
+        routingModuleFullPath: `${demo}/${casings.dashCase}-demo-routing.module`,
         moduleClassName: `${casings.pascalCase}DemoModule`,
         moduleFilePath: `${casings.dashCase}-demo.module`,
         indexTs: `${demo}/index.ts`
       },
       real: {
-        folderPath: real,
+        folderFullPath: real,
+        moduleFullPath: `${real}/${casings.dashCase}.module`,
         componentClassName: `${casings.pascalCase}Component`,
         moduleClassName: `${casings.pascalCase}Module`,
         componentFilePath: `${casings.dashCase}.component`,
