@@ -10,7 +10,7 @@ describe('NameGenerator', () => {
       demo: {
         folderFullPath: 'components/hello-world/hello-world-demo',
         componentHtmlFullPath: 'components/hello-world/hello-world-demo/hello-world-demo.component.html',
-        routingModuleFullPath: 'components/hello-world/hello-world-demo/hello-world-demo-routing.module',
+        moduleFullPath: 'components/hello-world/hello-world-demo/hello-world-demo.module',
         moduleClassName: 'HelloWorldDemoModule',
         moduleFilePath: 'hello-world-demo.module',
         indexTs: 'components/hello-world/hello-world-demo/index.ts'

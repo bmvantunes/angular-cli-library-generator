@@ -3,23 +3,23 @@ import { INames } from '../names.interface';
 
 export class InnerDemoComponentGenerator {
   static async generate(paths: INames) {
-    await InnerDemoComponentGenerator.generateModules(paths);
+    await InnerDemoComponentGenerator.generateModule(paths);
     await InnerDemoComponentGenerator.generateComponent(paths);
     await InnerDemoComponentGenerator.generateIndexFile(paths);
   }
 
-  private static async generateModules(paths: INames) {
+  private static async generateModule(paths: INames) {
     const modulePath = paths.demo.folderFullPath;
 
-    const params = ['g', 'm', modulePath, '--routing'];
+    const params = ['g', 'm', modulePath];
     return await AngularCliWrapper.run(params);
   }
 
   private static async generateComponent(paths: INames) {
     const componentPath = paths.demo.folderFullPath;
-    const routingModulePath = paths.demo.routingModuleFullPath;
+    const moduleFullPath = paths.demo.moduleFullPath;
 
-    const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'Default', '-it', 'false'];
+    const params = ['g', 'c', componentPath, '-m', moduleFullPath, '-cd', 'Default', '-it', 'false'];
     return await AngularCliWrapper.run(params);
   }
 

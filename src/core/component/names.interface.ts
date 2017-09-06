@@ -2,7 +2,7 @@ export interface INames {
   demo: {
     folderFullPath: string;
     componentHtmlFullPath: string;
-    routingModuleFullPath: string;
+    moduleFullPath: string;
     moduleClassName: string;
     moduleFilePath: string;
     indexTs: string;

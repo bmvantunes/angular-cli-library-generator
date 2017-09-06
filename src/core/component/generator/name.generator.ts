@@ -13,7 +13,7 @@ export class NameGenerator {
       demo: {
         folderFullPath: demo,
         componentHtmlFullPath: `${demo}/${casings.dashCase}-demo.component.html`,
-        routingModuleFullPath: `${demo}/${casings.dashCase}-demo-routing.module`,
+        moduleFullPath: `${demo}/${casings.dashCase}-demo.module`,
         moduleClassName: `${casings.pascalCase}DemoModule`,
         moduleFilePath: `${casings.dashCase}-demo.module`,
         indexTs: `${demo}/index.ts`
