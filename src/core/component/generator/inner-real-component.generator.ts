@@ -25,7 +25,7 @@ export class InnerRealComponentGenerator {
   }
 
   private static async generateIndexFile(paths: INames) {
-    const indexTs = paths.demo.indexTs;
+    const indexTs = paths.real.indexTs;
     const moduleClassName = paths.real.moduleClassName;
     const moduleFilePath = paths.real.moduleFilePath;
     const componentClassName = paths.real.componentClassName;
