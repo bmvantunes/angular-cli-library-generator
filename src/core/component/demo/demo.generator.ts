@@ -3,8 +3,8 @@ import { INames } from '../names.interface';
 
 export class DemoGenerator {
   static async generate(paths: INames) {
-    await DemoGenerator.generateModules(paths.demo.folderPath);
-    await DemoGenerator.generateComponent(paths.demo.folderPath, paths.demo.routingModulePath);
+    await DemoGenerator.generateModules(paths.demo.folderFullPath);
+    await DemoGenerator.generateComponent(paths.demo.folderFullPath, paths.demo.routingModuleFullPath);
     await DemoGenerator.generateIndexFile(paths);
   }
 
@@ -14,7 +14,7 @@ export class DemoGenerator {
   }
 
   private static async generateComponent(componentPath: string, routingModulePath: string) {
-    const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'OnPush'];
+    const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'Default'];
     return await AngularCliWrapper.run(params);
   }
 
