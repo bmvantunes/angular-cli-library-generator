@@ -24,8 +24,8 @@ export class DemoGenerator {
     const moduleFilePath = paths.demo.moduleFilePath;
 
     return await AngularCliWrapper.createFile(indexTs,
-      `import { ${moduleClassName} } from './${moduleFilePath};\n'` +
-      `export { ${moduleClassName} };`
+      `import { ${moduleClassName} } from './${moduleFilePath}';\n\n` +
+      `export { ${moduleClassName} };\n`
     );
   }
 }
