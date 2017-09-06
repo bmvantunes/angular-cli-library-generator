@@ -22,7 +22,7 @@ export class OuterComponentGenerator {
         const allNames = NameGenerator.generate(item);
         const lazyModule = `./${allNames.demo.folderFullPath}#${allNames.demo.moduleClassName}`;
         return `  { path: '${item}', loadChildren: '${lazyModule}' }`;
-      }).join(',') + `\n];\n`;
+      }).join(',\n') + `\n];\n`;
   }
 
   private static async generateIndex(directories: string[]) {
