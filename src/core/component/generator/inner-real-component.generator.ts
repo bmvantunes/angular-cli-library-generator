@@ -20,7 +20,7 @@ export class InnerRealComponentGenerator {
     const componentPath = paths.real.folderFullPath;
     const moduleFullPath = paths.real.moduleFullPath;
 
-    const params = ['g', 'c', componentPath, '-m', moduleFullPath, '--exports', 'true', '-cd', 'OnPush'];
+    const params = ['g', 'c', componentPath, '-m', moduleFullPath, '--export', 'true', '-cd', 'OnPush'];
     return await AngularCliWrapper.run(params);
   }
 
