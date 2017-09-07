@@ -12,15 +12,17 @@ export class InnerDemoComponentGenerator {
     const modulePath = paths.demo.folderFullPath;
 
     const params = ['g', 'm', modulePath, '--routing'];
-    return await AngularCliWrapper.run(params);
+    await AngularCliWrapper.run(params);
   }
 
   private static async generateComponent(paths: INames) {
     const componentPath = paths.demo.folderFullPath;
     const routingModulePath = paths.demo.routingModuleFullPath;
+    const htmlFullPath = paths.demo.componentHtmlFullPath;
 
     const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'Default', '-it', 'false'];
-    return await AngularCliWrapper.run(params);
+    await AngularCliWrapper.run(params);
+    await AngularCliWrapper.createFile(htmlFullPath, '<router-outlet></router-outlet>');
   }
 
   private static async generateIndexFile(paths: INames) {
@@ -28,7 +30,7 @@ export class InnerDemoComponentGenerator {
     const moduleClassName = paths.demo.moduleClassName;
     const moduleFilePath = paths.demo.moduleFilePath;
 
-    return await AngularCliWrapper.createFile(indexTs,
+    await AngularCliWrapper.createFile(indexTs,
       `export { ${moduleClassName} } from './${moduleFilePath}';\n`
     );
   }
