@@ -1,6 +1,7 @@
 const resolveNpm = require('resolve');
 const spawn = require('child_process').spawn;
 const fs = require('fs');
+const jsonfile = require('jsonfile');
 
 export class AngularCliWrapper {
   static run(commands: string[]): Promise<void> {
@@ -33,5 +34,9 @@ export class AngularCliWrapper {
         resolve();
       });
     });
+  }
+
+  static getAngularCliAppSettings() {
+    return jsonfile.readFileSync(`${process.cwd()}/.angular-cli.json`).apps[0];
   }
 }
