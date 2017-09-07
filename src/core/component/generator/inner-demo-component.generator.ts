@@ -27,11 +27,11 @@ export class InnerDemoComponentGenerator {
   }
 
   private static async overrideRouteRoutingModule(paths: INames) {
-    const path = `${process.cwd()}/src/app/${paths.demo.routingModuleFullPath}`;
+    const path = `${process.cwd()}/src/app/${paths.demo.routingModuleFullPath}.ts`;
     const regex = 'const routes: Routes = [];';
     const replacement =
       'const routes: Routes = [\n' +
-      `  { path: '', component: ${paths.demo.componentClassName} }` +
+      `  { path: '', component: ${paths.demo.componentClassName} }\n` +
       '];\n';
 
     replace({ regex, replacement, paths: [path], silent: true });
