@@ -10,6 +10,7 @@ export class NameGenerator {
     const real = `${pathStart}/${casings.dashCase}`;
 
     return {
+      originalInput: casings.dashCase,
       demo: {
         folderFullPath: demo,
         componentHtmlFullPath: `${demo}/${casings.dashCase}-demo.component.html`,

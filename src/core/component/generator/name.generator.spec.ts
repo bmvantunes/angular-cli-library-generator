@@ -7,6 +7,7 @@ describe('NameGenerator', () => {
     const result = NameGenerator.generate('hello-world');
 
     const expected: INames = {
+      originalInput: 'hello-world',
       demo: {
         folderFullPath: 'components/hello-world/hello-world-demo',
         componentHtmlFullPath: 'components/hello-world/hello-world-demo/hello-world-demo.component.html',

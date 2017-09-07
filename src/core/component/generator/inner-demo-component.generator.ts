@@ -5,6 +5,7 @@ export class InnerDemoComponentGenerator {
   static async generate(paths: INames) {
     await InnerDemoComponentGenerator.generateModules(paths);
     await InnerDemoComponentGenerator.generateComponent(paths);
+    await InnerDemoComponentGenerator.overrideDemoHtmlFile(paths);
     await InnerDemoComponentGenerator.generateIndexFile(paths);
   }
 
@@ -18,11 +19,16 @@ export class InnerDemoComponentGenerator {
   private static async generateComponent(paths: INames) {
     const componentPath = paths.demo.folderFullPath;
     const routingModulePath = paths.demo.routingModuleFullPath;
-    const htmlFullPath = paths.demo.componentHtmlFullPath;
 
     const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'Default', '-it', 'false'];
     await AngularCliWrapper.run(params);
-    await AngularCliWrapper.createFile(htmlFullPath, '<router-outlet></router-outlet>');
+  }
+
+  private static async overrideDemoHtmlFile(paths: INames) {
+    const htmlFullPath = paths.demo.componentHtmlFullPath;
+    const prefix = AngularCliWrapper.getAngularCliAppSettings().prefix;
+    const realComponentSelector = `${prefix}-${paths.originalInput}`;
+    await AngularCliWrapper.createFile(htmlFullPath, realComponentSelector);
   }
 
   private static async generateIndexFile(paths: INames) {
