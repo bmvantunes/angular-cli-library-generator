@@ -1,6 +1,6 @@
 import { AngularCliWrapper } from '../../ng-cli.wrapper';
 import { INames } from '../names.interface';
-const replace = require("replace");
+const replace = require('replace');
 
 export class InnerDemoComponentGenerator {
   static async generate(paths: INames) {

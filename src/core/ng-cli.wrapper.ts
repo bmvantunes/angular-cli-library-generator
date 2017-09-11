@@ -2,6 +2,8 @@ const resolveNpm = require('resolve');
 const spawn = require('child_process').spawn;
 const fs = require('fs');
 const jsonfile = require('jsonfile');
+const rimraf = require('rimraf');
+const mkdirp = require('mkdirp');
 
 export class AngularCliWrapper {
   static run(commands: string[]): Promise<void> {
@@ -32,6 +34,24 @@ export class AngularCliWrapper {
 
         console.log(`${file} written to disk`);
         resolve();
+      });
+    });
+  }
+
+  static deleteAndRecreateFolder(folderPath: string) {
+    const path = `${process.cwd()}/src/app/${folderPath}`;
+    return new Promise((resolve, reject) => {
+      rimraf(path, () => {
+        mkdirp(path, (err: any) => {
+          if (err) {
+            console.error(`Error creating ${path} folder`);
+            process.exit(-1);
+            reject();
+          }
+
+          console.log(`${path} folder created`);
+          resolve();
+        });
       });
     });
   }
