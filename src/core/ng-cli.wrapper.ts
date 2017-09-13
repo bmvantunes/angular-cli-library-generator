@@ -64,9 +64,12 @@ export class AngularCliWrapper {
     return new Promise((resolve, reject) => {
       ncp(src, dest, (err: any) => {
         if (err) {
-          return console.error(err);
+          console.error(`Error copying ${src} to ${dest}`, err);
+          process.exit(-1);
+          reject();
         }
         console.log('Folder copied!');
+        resolve();
       });
     });
   }
