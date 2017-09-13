@@ -58,11 +58,13 @@ export class AngularCliWrapper {
     });
   }
 
-  static copyFolder(source: string, destination: string) {
+  static copyFolder(source: string, destination: string, replaceFileType: string) {
     const src = path.join(__dirname, '../../', source);
     const dest = `${process.cwd()}/src/app/${destination}`;
     return new Promise((resolve, reject) => {
-      ncp(src, dest, (err: any) => {
+      ncp(src, dest, {
+        rename: (name: string) => name.replace(replaceFileType, '')
+      }, (err: any) => {
         if (err) {
           console.error(`Error copying ${src} to ${dest}`, err);
           process.exit(-1);
