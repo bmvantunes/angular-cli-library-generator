@@ -66,9 +66,12 @@ export class AngularCliWrapper {
         rename: (name: string) => name.replace(replaceFileType, '')
       }, (err: any) => {
         if (err) {
-          return console.error(err);
+          console.error(`Error copying ${src} to ${dest}`, err);
+          process.exit(-1);
+          reject();
         }
         console.log('Folder copied!');
+        resolve();
       });
     });
   }
