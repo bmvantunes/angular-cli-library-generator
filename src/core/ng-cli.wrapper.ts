@@ -4,6 +4,8 @@ const fs = require('fs');
 const jsonfile = require('jsonfile');
 const rimraf = require('rimraf');
 const mkdirp = require('mkdirp');
+const ncp = require('ncp');
+const path = require('path');
 
 export class AngularCliWrapper {
   static run(commands: string[]): Promise<void> {
@@ -52,6 +54,19 @@ export class AngularCliWrapper {
           console.log(`${path} folder created`);
           resolve();
         });
+      });
+    });
+  }
+
+  static copyFolder(source: string, destination: string) {
+    const src = path.join(__dirname, '../../', source);
+    const dest = `${process.cwd()}/src/app/${destination}`;
+    return new Promise((resolve, reject) => {
+      ncp(src, dest, (err: any) => {
+        if (err) {
+          return console.error(err);
+        }
+        console.log('Folder copied!');
       });
     });
   }

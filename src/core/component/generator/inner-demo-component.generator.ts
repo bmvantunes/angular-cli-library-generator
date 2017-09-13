@@ -22,7 +22,7 @@ export class InnerDemoComponentGenerator {
     const componentPath = paths.demo.folderFullPath;
     const routingModulePath = paths.demo.routingModuleFullPath;
 
-    const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'Default', '-it', 'false'];
+    const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'Default', '-it', 'false', '-is', 'false'];
     await AngularCliWrapper.run(params);
   }
 
