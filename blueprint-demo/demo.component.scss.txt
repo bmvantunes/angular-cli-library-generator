@@ -10,23 +10,31 @@
  ***************************************************************
  ***************************************************************/
 
- :host {
+@import "./demo.variables";
+
+:host {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  border: 3px solid red;
 
-  main {
+  header {
+    padding: 1rem;
+    background: $header-background-color;
+    color: $header-color;
+    box-shadow: $header-box-shadow;
+  }
+
+  .page {
     display: flex;
     flex-direction: row;
     flex: 1 1 auto;
-    border: 3px solid blue;
 
-    section {
+    main {
       flex: 1 1 auto;
-      border: 3px solid yellow;
+      overflow: auto;
+      padding: 1rem;
     }
   }
 }

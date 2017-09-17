@@ -10,7 +10,46 @@
  ***************************************************************
  ***************************************************************/
 
+@import "../demo.variables";
+
 :host {
-  flex: 0 0 250px;
-  border: 3px solid pink;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 $aside-width;
+  border: $aside-right-border;
+
+  .searchbox-container {
+    padding: 1rem;
+    border-bottom: $aside-search-border-bottom;
+
+    input {
+      width: 100%;
+      padding: .5rem .75rem;
+      font-size: 1rem;
+      line-height: 1.25;
+      color: $aside-search-input-color;
+      border: $aside-search-input-border;
+      border-radius: .25rem;
+    }
+  }
+
+  nav {
+    overflow: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    .nav-item {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: $aside-nav-item-color;
+      background-color: $aside-nav-item-background-color;
+
+      &:hover {
+        background-color: $aside-nav-item-hover-background-color;
+        color: $aside-nav-item-hover-color;
+        text-shadow: $aside-nav-item-hover-text-shadow;
+      }
+    }
+  }
 }
