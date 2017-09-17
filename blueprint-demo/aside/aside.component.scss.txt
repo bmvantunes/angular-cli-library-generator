@@ -15,7 +15,7 @@
 :host {
   display: flex;
   flex-direction: column;
-  flex: 0 0 $aside-width;
+  width: $aside-width;
   border: $aside-right-border;
 
   .searchbox-container {
@@ -44,6 +44,8 @@
       text-decoration: none;
       color: $aside-nav-item-color;
       background-color: $aside-nav-item-background-color;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       &:hover {
         background-color: $aside-nav-item-hover-background-color;
