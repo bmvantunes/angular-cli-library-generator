@@ -1,0 +1,22 @@
+/**
+ * aside
+ */
+$aside-width: 250px;
+$aside-right-border: 1px solid rgba(0, 0, 0, 0.0980392);
+
+$aside-search-border-bottom: 1px solid rgba(0,0,0,.05);
+$aside-search-input-color: #495057;
+$aside-search-input-border: 1px solid rgba(0,0,0,.15);
+
+$aside-nav-item-color: rgba(0,0,0,.65);
+$aside-nav-item-background-color: transparent;
+$aside-nav-item-hover-color: #1976d2;
+$aside-nav-item-hover-background-color: #dbdbdb;
+$aside-nav-item-hover-text-shadow: 0 0 5px #fff;
+
+/**
+ * header
+ */
+$header-background-color: #3f51b5;
+$header-color: white;
+$header-box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);

@@ -10,12 +10,13 @@
  ***************************************************************
  ***************************************************************/
 
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'nglg-demo',
   templateUrl: './demo.component.html',
-  styleUrls: ['./demo.component.scss']
+  styleUrls: ['./demo.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DemoComponent { }

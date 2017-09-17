@@ -16,10 +16,10 @@
   NGLG Documentation
 </header>
 
-<main>
+<div class="page">
   <nglg-aside></nglg-aside>
 
-  <section>
+  <main>
     <router-outlet></router-outlet>
-  </section>
-</main>
+  </main>
+</div>

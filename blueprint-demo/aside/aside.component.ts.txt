@@ -10,7 +10,7 @@
  ***************************************************************
  ***************************************************************/
 
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ROUTES } from '../demo.routes';
 
@@ -18,8 +18,13 @@ import { ROUTES } from '../demo.routes';
   // tslint:disable-next-line:component-selector
   selector: 'nglg-aside',
   templateUrl: './aside.component.html',
-  styleUrls: ['./aside.component.scss']
+  styleUrls: ['./aside.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AsideComponent {
   routes = ROUTES;
+
+  onInputChanged(input: string) {
+    this.routes = ROUTES.filter(el => el.path.includes(input));
+  }
 }

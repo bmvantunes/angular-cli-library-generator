@@ -12,6 +12,19 @@
  ***************************************************************/
 -->
 
-<div *ngFor="let route of routes">
-  <a [routerLink]="[ route.path ]">{{ route.path }}</a>
+<div class="searchbox-container">
+  <input
+    #search
+    (input)="onInputChanged(search.value)"
+    type="search"
+    placeholder="Search..."
+    aria-label="Search for..."
+    autocomplete="off"
+    spellcheck="false">
 </div>
+
+<nav>
+  <ng-container *ngFor="let route of routes">
+    <a class="nav-item" [routerLink]="[ route.path ]">{{ route.path }}</a>
+  </ng-container>
+</nav>
