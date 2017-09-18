@@ -22,7 +22,7 @@ export class InnerDemoComponentGenerator {
     const componentPath = paths.demo.folderFullPath;
     const routingModulePath = paths.demo.routingModuleFullPath;
 
-    const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'Default', '-it', 'false', '-is', 'false'];
+    const params = ['g', 'c', componentPath, '-m', routingModulePath, '-cd', 'Default', '-it', 'false', '-is', 'false', '--spec', 'false'];
     await AngularCliWrapper.run(params);
   }
 
@@ -30,9 +30,11 @@ export class InnerDemoComponentGenerator {
     const path = `${process.cwd()}/src/app/${paths.demo.routingModuleFullPath}.ts`;
     const regex = /const routes\: Routes = \[\];/;
     const replacement =
+      '/* tslint:disable */\n' +
       'const routes: Routes = [\n' +
       `  { path: '', component: ${paths.demo.componentClassName} }\n` +
-      '];';
+      '];\n' +
+      '/* tslint:enable */\n';
 
     replace({ regex, replacement, paths: [path], silent: true });
   }
