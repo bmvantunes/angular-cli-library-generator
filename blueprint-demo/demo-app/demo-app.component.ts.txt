@@ -10,31 +10,15 @@
  ***************************************************************
  ***************************************************************/
 
-@import "./demo.variables";
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-:host {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-
-  header {
-    padding: 1rem;
-    background: $header-background-color;
-    color: $header-color;
-    box-shadow: $header-box-shadow;
-  }
-
-  .page {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
-
-    main {
-      flex: 1 1 auto;
-      overflow: auto;
-      padding: 1rem;
-    }
-  }
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'nglg-demo-app',
+  templateUrl: './demo-app.component.html',
+  styleUrls: ['./demo-app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class DemoAppComponent {
+  @Input() appName = 'NGLG Documentation';
 }
