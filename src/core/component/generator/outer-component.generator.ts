@@ -21,7 +21,7 @@ export class OuterComponentGenerator {
       'export const ROUTES = [\n' +
       directories.map((item: string) => {
         const allNames = NameGenerator.generate(item);
-        const lazyModule = `../${allNames.demo.folderFullPath}#${allNames.demo.moduleClassName}`;
+        const lazyModule = `../../${allNames.demo.folderFullPath}#${allNames.demo.moduleClassName}`;
         return `  { path: '${item}', loadChildren: '${lazyModule}' }`;
       }).join(',\n') + '\n];\n' +
       '/* tslint:enable */\n';
