@@ -27,6 +27,15 @@ $aside-nav-item-hover-background-color: #dbdbdb;
 $aside-nav-item-hover-text-shadow: 0 0 5px #fff;
 
 /**
+ * aside
+ */
+$hamburger-color: white;
+$hamburger-width: 25px;
+$hamburger-margin-right: 10px;
+$hamburger-single-height: 3px;
+$hamburger-single-separation: 7px;
+
+/**
  * header
  */
 $header-background-color: #3f51b5;

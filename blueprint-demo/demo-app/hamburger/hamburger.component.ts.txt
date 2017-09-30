@@ -10,32 +10,14 @@
  ***************************************************************
  ***************************************************************/
 
-@import "./demo-app.variables";
+import { Component, EventEmitter, Output } from '@angular/core';
 
-:host {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-
-  header {
-    display: flex;
-    padding: 1rem;
-    background: $header-background-color;
-    color: $header-color;
-    box-shadow: $header-box-shadow;
-  }
-
-  .page {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
-
-    main {
-      flex: 1 1 auto;
-      overflow: auto;
-      padding: 1rem;
-    }
-  }
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'nglg-hamburger',
+  templateUrl: './hamburger.component.html',
+  styleUrls: ['./hamburger.component.scss']
+})
+export class HamburgerComponent {
+  @Output() onMenuClick = new EventEmitter();
 }

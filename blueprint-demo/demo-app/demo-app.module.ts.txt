@@ -15,6 +15,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AsideComponent } from './aside/aside.component';
+import { HamburgerComponent } from './hamburger/hamburger.component';
 import { DemoAppComponent } from './demo-app.component';
 import { ROUTES } from './demo-app.routes';
 
@@ -25,7 +26,8 @@ import { ROUTES } from './demo-app.routes';
   ],
   declarations: [
     DemoAppComponent,
-    AsideComponent
+    AsideComponent,
+    HamburgerComponent
   ],
   exports: [
     DemoAppComponent

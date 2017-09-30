@@ -12,10 +12,13 @@
  ***************************************************************/
 -->
 
-<header>{{ appName }}</header>
+<header>
+  <nglg-hamburger (onMenuClick)="toggleMenu()"></nglg-hamburger>
+  {{ appName }}
+</header>
 
 <div class="page">
-  <nglg-aside></nglg-aside>
+  <nglg-aside *ngIf="menuIsOpen"></nglg-aside>
 
   <main>
     <router-outlet></router-outlet>

@@ -10,32 +10,35 @@
  ***************************************************************
  ***************************************************************/
 
-@import "./demo-app.variables";
+@import "../demo-app.variables";
 
 :host {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
+  width: $hamburger-width;
+  margin-right: $hamburger-margin-right;
 
-  header {
-    display: flex;
-    padding: 1rem;
-    background: $header-background-color;
-    color: $header-color;
-    box-shadow: $header-box-shadow;
-  }
+  .hamburger {
+    width: $hamburger-width;
+    cursor: pointer;
 
-  .page {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
+    span{
+      &, &:before, &:after {
+        height: $hamburger-single-height;
+        width: $hamburger-width;
+        background: $hamburger-color;
+        position: absolute;
+        display: block;
+        content: '';
+      }
 
-    main {
-      flex: 1 1 auto;
-      overflow: auto;
-      padding: 1rem;
+      &:before {
+        top: $hamburger-single-separation;
+      }
+
+      &:after {
+        top: 2 * $hamburger-single-separation;
+      }
     }
   }
 }
+

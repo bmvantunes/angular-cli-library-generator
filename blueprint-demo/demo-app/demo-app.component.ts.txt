@@ -20,5 +20,10 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DemoAppComponent {
+  menuIsOpen = true;
   @Input() appName = 'NGLG Documentation';
+
+  toggleMenu() {
+    this.menuIsOpen = !this.menuIsOpen;
+  }
 }
