@@ -21,6 +21,7 @@
 
   header {
     display: flex;
+    flex-shrink: 0;
     padding: 1rem;
     background: $header-background-color;
     color: $header-color;
