@@ -18,11 +18,13 @@ import { AsideComponent } from './aside/aside.component';
 import { HamburgerComponent } from './hamburger/hamburger.component';
 import { DemoAppComponent } from './demo-app.component';
 import { ROUTES } from './demo-app.routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    BrowserAnimationsModule
   ],
   declarations: [
     DemoAppComponent,

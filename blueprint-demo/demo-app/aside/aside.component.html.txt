@@ -12,19 +12,21 @@
  ***************************************************************/
 -->
 
-<div class="searchbox-container">
-  <input
-    #search
-    (input)="onInputChanged(search.value)"
-    type="search"
-    placeholder="Search..."
-    aria-label="Search for..."
-    autocomplete="off"
-    spellcheck="false">
-</div>
+<div class="aside-container">
+  <div class="searchbox-container">
+    <input
+      #search
+      (input)="onInputChanged(search.value)"
+      type="search"
+      placeholder="Search..."
+      aria-label="Search for..."
+      autocomplete="off"
+      spellcheck="false">
+  </div>
 
-<nav>
-  <ng-container *ngFor="let route of routes">
-    <a class="nav-item" [routerLink]="[ route.path ]">{{ route.path }}</a>
-  </ng-container>
-</nav>
+  <nav>
+    <ng-container *ngFor="let route of routes">
+      <a class="nav-item" [routerLink]="[ route.path ]">{{ route.path }}</a>
+    </ng-container>
+  </nav>
+</div>

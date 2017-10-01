@@ -10,18 +10,21 @@
  ***************************************************************
  ***************************************************************/
 
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 
 import { ROUTES } from '../demo-app.routes';
+import { asideAnimations } from './aside.animations';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'nglg-aside',
   templateUrl: './aside.component.html',
   styleUrls: ['./aside.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: asideAnimations
 })
 export class AsideComponent {
+  @HostBinding('@asideOpenCloseAnimation') asideOpenCloseAnimation = '';
   routes = ROUTES;
 
   onInputChanged(input: string) {
