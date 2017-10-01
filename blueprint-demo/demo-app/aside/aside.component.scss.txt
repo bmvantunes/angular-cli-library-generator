@@ -13,10 +13,14 @@
 @import "../demo-app.variables";
 
 :host {
-  display: flex;
-  flex-direction: column;
-  width: $aside-width;
   border: $aside-right-border;
+  flex-shrink: 0;
+
+  &, .aside-container {
+    display: flex;
+    flex-direction: column;
+    width: $aside-width;
+  }
 
   .searchbox-container {
     padding: 1rem;
@@ -44,8 +48,6 @@
       text-decoration: none;
       color: $aside-nav-item-color;
       background-color: $aside-nav-item-background-color;
-      overflow: hidden;
-      text-overflow: ellipsis;
 
       &:hover {
         background-color: $aside-nav-item-hover-background-color;
