@@ -11,6 +11,7 @@
  ***************************************************************/
 
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 import { routerTransition } from './demo-app.animations';
 
@@ -28,5 +29,9 @@ export class DemoAppComponent {
 
   toggleMenu() {
     this.menuIsOpen = !this.menuIsOpen;
+  }
+
+  getRouteAnimation(outlet: RouterOutlet) {
+    return outlet.isActivated && outlet.activatedRouteData['animation'];
   }
 }
