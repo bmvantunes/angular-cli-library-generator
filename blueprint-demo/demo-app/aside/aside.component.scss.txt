@@ -16,6 +16,7 @@
   border: $aside-right-border;
   background-color: $aside-background-color;
   flex-shrink: 0;
+  z-index: 1;
 
   &, .aside-container {
     display: flex;

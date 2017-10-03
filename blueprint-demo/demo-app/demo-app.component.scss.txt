@@ -26,6 +26,7 @@
     background: $header-background-color;
     color: $header-color;
     box-shadow: $header-box-shadow;
+    z-index: 2;
   }
 
   .page {
