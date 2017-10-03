@@ -32,7 +32,7 @@ export class InnerDemoComponentGenerator {
     const replacement =
       '/* tslint:disable */\n' +
       'const routes: Routes = [\n' +
-      `  { path: '', component: ${paths.demo.componentClassName} }\n` +
+      `  { path: '', component: ${paths.demo.componentClassName}, data: { animation: '${paths.originalInput}' } }\n` +
       '];\n' +
       '/* tslint:enable */\n';
 

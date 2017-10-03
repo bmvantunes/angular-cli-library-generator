@@ -12,12 +12,15 @@
 
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
+import { routerTransition } from './demo-app.animations';
+
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'nglg-demo-app',
   templateUrl: './demo-app.component.html',
   styleUrls: ['./demo-app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [routerTransition]
 })
 export class DemoAppComponent {
   menuIsOpen = true;
