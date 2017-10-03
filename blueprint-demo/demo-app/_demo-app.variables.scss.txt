@@ -14,6 +14,7 @@
  * aside
  */
 $aside-width: 250px;
+$aside-background-color: white;
 $aside-right-border: 1px solid rgba(0, 0, 0, 0.0980392);
 
 $aside-search-border-bottom: 1px solid rgba(0,0,0,.05);
@@ -27,7 +28,7 @@ $aside-nav-item-hover-background-color: #dbdbdb;
 $aside-nav-item-hover-text-shadow: 0 0 5px #fff;
 
 /**
- * aside
+ * hamburger
  */
 $hamburger-color: white;
 $hamburger-width: 25px;

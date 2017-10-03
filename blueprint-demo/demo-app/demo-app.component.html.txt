@@ -20,7 +20,7 @@
 <div class="page">
   <nglg-aside *ngIf="menuIsOpen"></nglg-aside>
 
-  <main>
-    <router-outlet></router-outlet>
+  <main [@routerTransition]="outlet.activatedRoute?.animation">
+    <router-outlet #outlet="outlet"></router-outlet>
   </main>
 </div>
