@@ -27,7 +27,7 @@
     "replace": "^0.3.0",
     "rimraf": "^2.6.2",
     "tslib": "^1.7.1",
-    "yargs": "^9.0.1"
+    "yargs": "^10.0.3"
   },
   "devDependencies": {
     "@types/chai": "^4.0.4",
