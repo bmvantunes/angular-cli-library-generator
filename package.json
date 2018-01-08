@@ -32,7 +32,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
-    "@types/node": "^8.0.31",
+    "@types/node": "^9.3.0",
     "@types/yargs": "^8.0.2",
     "chai": "^4.1.2",
     "codecov": "^2.3.0",
