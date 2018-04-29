@@ -1,3 +1,5 @@
+⛔️ [DEPRECATED] - @angular/cli now supports @schematics
+
 [![Build Status](https://travis-ci.org/bmvantunes/angular-cli-library-generator.svg?branch=master)](https://travis-ci.org/bmvantunes/angular-cli-library-generator)
 [![dependencies Status](https://david-dm.org/bmvantunes/angular-cli-library-generator/status.svg)](https://david-dm.org/bmvantunes/angular-cli-library-generator)
 [![devDependencies Status](https://david-dm.org/bmvantunes/angular-cli-library-generator/dev-status.svg)](https://david-dm.org/bmvantunes/angular-cli-library-generator?type=dev)
